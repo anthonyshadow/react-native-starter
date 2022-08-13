@@ -3,16 +3,16 @@ import { View, Text, StyleSheet, FlatList } from "react-native";
 
 const ListScreen = () => {
   const friends = [
-    { name: "Friend #1", age: "Age 27" },
-    { name: "Friend #2", age: "Age 27" },
-    { name: "Friend #3", age: "Age 27" },
-    { name: "Friend #4", age: "Age 27" },
-    { name: "Friend #5", age: "Age 27" },
-    { name: "Friend #6", age: "Age 27" },
-    { name: "Friend #7", age: "Age 27" },
-    { name: "Friend #8", age: "Age 27" },
-    { name: "Friend #9", age: "Age 27" },
-    { name: "Friend #10", age: "Age 27" },
+    { name: "Friend #1", age: 27 },
+    { name: "Friend #2", age: 27 },
+    { name: "Friend #3", age: 27 },
+    { name: "Friend #4", age: 27 },
+    { name: "Friend #5", age: 27 },
+    { name: "Friend #6", age: 27 },
+    { name: "Friend #7", age: 27 },
+    { name: "Friend #8", age: 27 },
+    { name: "Friend #9", age: 27 },
+    { name: "Friend #10", age: 27 },
   ];
 
   //Flatlist is like mapping on ReactJs
@@ -31,7 +31,7 @@ const ListScreen = () => {
       renderItem={({ item }) => {
         return (
           <Text style={styles.testStyle}>
-            {item.name} - {item.age}
+            {item.name} - Age: {item.age}
           </Text>
         );
       }}
