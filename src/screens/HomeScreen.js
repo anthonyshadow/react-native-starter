@@ -1,8 +1,21 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
-const HomeScreen = () => {
-  return <Text style={styles.text}>Hello World</Text>;
+const HomeScreen = ({ navigation }) => {
+  return (
+    <View>
+      <Text style={styles.text}>Home Screen</Text>
+      <Button
+        title="Go To Components Demo"
+        //Because of createStackNavigator we have access to these props and the routes defined in app.js
+        onPress={() => navigation.navigate("Components")}
+      />
+      <Button
+        title="Go To List Demo"
+        onPress={() => navigation.navigate("List")}
+      />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
